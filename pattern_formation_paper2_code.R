@@ -157,13 +157,6 @@ angles_long <- tri %>%
 
 glimpse(angles_long)
 
-## =========================
-## 5. EXPLORATORY PLOTS
-## =========================
-
-### =========================
-## 5. EXPLORATORY PLOTS
-## =========================
 
 ## =========================
 ## 5. EXPLORATORY PLOTS
@@ -2216,7 +2209,7 @@ p_ratio_B <- ggplot(ratio_data, aes(x = genotype, y = dist_ratio)) +
   labs(
     x = "Genotype",
     y = "NN2 / NN1 distance ratio",
-    title = "B. By genotype"
+    title = "B. By colony"
   ) +
   theme_ratio
 
@@ -2280,3 +2273,55 @@ ggsave(
   height = 8.5,
   bg = "white"
 )
+
+
+# =========================
+# NN DISTANCE MAIN MODEL
+# =========================
+
+library(lme4)
+library(lmerTest)
+library(emmeans)
+
+m_dist <- lmer(
+  distance ~ dist_type + genotype + scale(day) + (1 | nubbin_id),
+  data = dist_long
+)
+
+# ANOVA table
+anova_dist <- anova(m_dist)
+
+# Estimated means NN1 vs NN2
+emm_dist <- emmeans(m_dist, pairwise ~ dist_type)
+
+print(anova_dist)
+print(emm_dist)
+
+# =========================
+# TEST INTERACTION (report but don't keep)
+# =========================
+
+m_dist_full <- lmer(
+  distance ~ dist_type * genotype + scale(day) + (1 | nubbin_id),
+  data = dist_long
+)
+
+anova_full <- anova(m_dist_full)
+
+cat("\nInteraction test (report only):\n")
+print(anova_full["dist_type:genotype", ])
+
+# =========================
+# DISTANCE RATIO MODEL
+# =========================
+
+m_ratio <- lmer(
+  dist_ratio ~ genotype + scale(day) + (1 | nubbin_id),
+  data = tri
+)
+
+anova_ratio <- anova(m_ratio)
+emm_ratio   <- emmeans(m_ratio, pairwise ~ genotype)
+
+print(anova_ratio)
+print(emm_ratio)

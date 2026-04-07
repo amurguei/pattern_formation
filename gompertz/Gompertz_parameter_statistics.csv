@@ -1,0 +1,7 @@
+dataset,parameter,method,p_value,statistic,df
+polyps,L,Kruskal-Wallis + Dunn,0.0019169542627388851,24.4614492753623,8
+polyps,k,ANOVA + Tukey,1.376312124552681e-4,NA,NA
+polyps,x0,ANOVA + Tukey,0.011203075978006785,NA,NA
+area,L,ANOVA + Tukey,0.0012843340200437607,NA,NA
+area,k,ANOVA + Tukey,0.07066555175321083,NA,NA
+area,x0,ANOVA + Tukey,1.5669281595667196e-5,NA,NA
