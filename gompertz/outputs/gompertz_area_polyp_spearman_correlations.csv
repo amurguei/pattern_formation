@@ -1,0 +1,4 @@
+comparison,method,rho,statistic,p_value
+L_area vs L_poly,Spearman rank correlation,0.8277997364953884,2614.000000000004,2.3260430069513583e-12
+k_area vs k_poly,Spearman rank correlation,0.6266139657444004,5668.000000000001,4.12885315299792e-6
+t0_area vs t0_poly,Spearman rank correlation,0.7524374176548088,3758.000000000003,2.521361689643096e-9

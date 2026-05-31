@@ -1,6 +1,5 @@
 ############################################################
-## MODEL 3 ONLY: FINAL ANGLE ANALYSIS
-## Keeps one model and extracts everything needed
+## MODEL 3: ANGLE ANALYSIS
 ############################################################
 
 ## =========================

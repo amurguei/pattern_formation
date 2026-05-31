@@ -1,0 +1,6 @@
+effect,group,term,estimate,conf.low,conf.high
+ran_pars,polyp_uid,sd__(Intercept),0.28494372858982103,NA,NA
+ran_pars,slide_id,sd__(Intercept),0.16415829908571583,NA,NA
+ran_pars,slide_id,cor__(Intercept).NN_level_c,0.9704964849990959,NA,NA
+ran_pars,slide_id,sd__NN_level_c,0.0488974414416245,NA,NA
+ran_pars,Residual,sd__Observation,0.24557877485813076,NA,NA

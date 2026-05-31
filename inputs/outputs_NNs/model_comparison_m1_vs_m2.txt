@@ -1,0 +1,9 @@
+Data: nn_long
+Models:
+m1_slide: distance ~ NN_level * Colony + (1 | slide_id)
+m2_slide_polyp: distance ~ NN_level * Colony + (1 | slide_id) + (1 | polyp_uid)
+               npar   AIC   BIC   logLik -2*log(L) Chisq Df Pr(>Chisq)    
+m1_slide         20 25941 26106 -12950.3     25901                        
+m2_slide_polyp   21 11508 11682  -5733.2     11466 14434  1  < 2.2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

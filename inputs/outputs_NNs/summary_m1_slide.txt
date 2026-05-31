@@ -1,0 +1,39 @@
+Linear mixed model fit by maximum likelihood . t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: distance ~ NN_level * Colony + (1 | slide_id)
+   Data: nn_long
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+  25940.6   26105.7  -12950.3   25900.6     28452 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-3.8073 -0.6530 -0.0637  0.5503  8.2359 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ slide_id (Intercept) 0.02491  0.1578  
+ Residual             0.14435  0.3799  
+Number of obs: 28472, groups:  slide_id, 45
+
+Fixed effects:
+                      Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)          1.038e+00  7.161e-02  4.476e+01  14.496  < 2e-16 ***
+NN_level             2.202e-01  2.354e-03  2.843e+04  93.514  < 2e-16 ***
+ColonySC10          -5.583e-02  1.013e-01  4.489e+01  -0.551   0.5844    
+ColonySC2            2.953e-02  1.021e-01  4.616e+01   0.289   0.7736    
+ColonySC3            8.688e-02  1.016e-01  4.532e+01   0.855   0.3969    
+ColonySC4            1.172e-01  1.017e-01  4.546e+01   1.152   0.2552    
+ColonySC6            1.846e-01  1.021e-01  4.630e+01   1.808   0.0772 .  
+ColonySC7           -1.045e-01  1.018e-01  4.574e+01  -1.026   0.3101    
+ColonySC8           -1.393e-01  1.017e-01  4.551e+01  -1.370   0.1775    
+ColonySC9           -1.473e-01  1.023e-01  4.663e+01  -1.440   0.1566    
+NN_level:ColonySC10 -2.860e-03  3.431e-03  2.843e+04  -0.834   0.4044    
+NN_level:ColonySC2   6.585e-02  4.142e-03  2.843e+04  15.899  < 2e-16 ***
+NN_level:ColonySC3   4.041e-02  3.702e-03  2.843e+04  10.915  < 2e-16 ***
+NN_level:ColonySC4   7.000e-02  3.774e-03  2.843e+04  18.547  < 2e-16 ***
+NN_level:ColonySC6   8.754e-02  4.123e-03  2.843e+04  21.231  < 2e-16 ***
+NN_level:ColonySC7   2.375e-02  3.945e-03  2.843e+04   6.021 1.76e-09 ***
+NN_level:ColonySC8   1.845e-02  3.810e-03  2.843e+04   4.842 1.29e-06 ***
+NN_level:ColonySC9   3.706e-02  4.398e-03  2.843e+04   8.426  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

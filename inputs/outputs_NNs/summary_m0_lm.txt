@@ -1,0 +1,35 @@
+
+Call:
+lm(formula = distance ~ NN_level * Colony, data = nn_long)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.3690 -0.2503 -0.0286  0.2132  4.0493 
+
+Coefficients:
+                     Estimate Std. Error t value Pr(>|t|)    
+(Intercept)          1.008290   0.012328  81.792  < 2e-16 ***
+NN_level             0.220175   0.002441  90.191  < 2e-16 ***
+ColonySC10          -0.025615   0.017963  -1.426 0.153871    
+ColonySC2            0.032374   0.021686   1.493 0.135481    
+ColonySC3            0.116803   0.019385   6.025 1.71e-09 ***
+ColonySC4            0.129028   0.019761   6.529 6.72e-11 ***
+ColonySC6            0.073794   0.021588   3.418 0.000631 ***
+ColonySC7           -0.061544   0.020656  -2.980 0.002890 ** 
+ColonySC8           -0.102948   0.019949  -5.160 2.48e-07 ***
+ColonySC9           -0.121151   0.023030  -5.261 1.45e-07 ***
+NN_level:ColonySC10 -0.002860   0.003557  -0.804 0.421346    
+NN_level:ColonySC2   0.065849   0.004294  15.334  < 2e-16 ***
+NN_level:ColonySC3   0.040409   0.003839  10.527  < 2e-16 ***
+NN_level:ColonySC4   0.070000   0.003913  17.888  < 2e-16 ***
+NN_level:ColonySC6   0.087537   0.004275  20.476  < 2e-16 ***
+NN_level:ColonySC7   0.023753   0.004090   5.807 6.43e-09 ***
+NN_level:ColonySC8   0.018450   0.003951   4.670 3.02e-06 ***
+NN_level:ColonySC9   0.037063   0.004561   8.127 4.58e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3939 on 28454 degrees of freedom
+Multiple R-squared:  0.708,	Adjusted R-squared:  0.7078 
+F-statistic:  4057 on 17 and 28454 DF,  p-value: < 2.2e-16
+

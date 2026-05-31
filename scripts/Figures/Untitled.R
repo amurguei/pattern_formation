@@ -20,6 +20,12 @@ library(car)
 library(FSA)
 library(multcompView)
 
+select <- dplyr::select
+filter <- dplyr::filter
+rename <- dplyr::rename
+mutate <- dplyr::mutate
+summarise <- dplyr::summarise
+
 # ----------------------------
 # 2. Load data
 # ----------------------------

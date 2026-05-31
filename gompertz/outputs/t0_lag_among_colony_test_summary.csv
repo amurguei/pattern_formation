@@ -1,0 +1,2 @@
+test_question,method,statistic_type,statistic,df1,df2,p_value,shapiro_p_residuals,levene_p,assumptions_met_for_anova
+Does t0_lag differ among colonies?,Kruskal-Wallis + Dunn post hoc test with Benjamini-Hochberg correction,chi_squared,14.608695652173907,8,NA,0.06721585886263552,0.005304990589161218,0.931467575896703,FALSE

@@ -1,0 +1,42 @@
+Linear mixed model fit by maximum likelihood . t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: distance ~ NN_level_c * Colony + (1 + NN_level_c | slide_id) +      (1 | polyp_uid)
+   Data: nn_long
+Control: lmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 2e+05))
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+   9921.5   10111.4   -4937.7    9875.5     28449 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-6.8061 -0.6010 -0.0003  0.6140  6.0411 
+
+Random effects:
+ Groups    Name        Variance Std.Dev. Corr
+ polyp_uid (Intercept) 0.081193 0.2849       
+ slide_id  (Intercept) 0.026948 0.1642       
+           NN_level_c  0.002391 0.0489   0.97
+ Residual              0.060309 0.2456       
+Number of obs: 28472, groups:  polyp_uid, 3559; slide_id, 45
+
+Fixed effects:
+                       Estimate Std. Error        df t value Pr(>|t|)    
+(Intercept)            2.026419   0.074477 36.884482  27.209  < 2e-16 ***
+NN_level_c             0.226836   0.021927 42.781288  10.345 3.24e-13 ***
+ColonySC10            -0.065856   0.105351 36.919697  -0.625 0.535745    
+ColonySC2              0.332135   0.106086 37.953912   3.131 0.003348 ** 
+ColonySC3              0.271064   0.105586 37.250421   2.567 0.014399 *  
+ColonySC4              0.431883   0.105688 37.392478   4.086 0.000223 ***
+ColonySC6              0.600268   0.106225 38.131198   5.651 1.70e-06 ***
+ColonySC7              0.009606   0.105828 37.591234   0.091 0.928160    
+ColonySC8             -0.050056   0.105702 37.412878  -0.474 0.638565    
+ColonySC9              0.026564   0.106334 38.313532   0.250 0.804065    
+NN_level_c:ColonySC10 -0.009284   0.031010 42.783129  -0.299 0.766099    
+NN_level_c:ColonySC2   0.069113   0.031056 43.032166   2.225 0.031341 *  
+NN_level_c:ColonySC3   0.033615   0.031023 42.854679   1.084 0.284628    
+NN_level_c:ColonySC4   0.067080   0.031030 42.891434   2.162 0.036260 *  
+NN_level_c:ColonySC6   0.132140   0.031079 43.154173   4.252 0.000112 ***
+NN_level_c:ColonySC7   0.016565   0.031037 42.930566   0.534 0.596294    
+NN_level_c:ColonySC8   0.012459   0.031030 42.892598   0.401 0.690047    
+NN_level_c:ColonySC9   0.034369   0.031067 43.096767   1.106 0.274736    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

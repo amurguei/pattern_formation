@@ -1,0 +1,2 @@
+test_question,method,statistic_type,statistic,df,p_value,shapiro_p_lag,normality_assumption_met
+Does t0_lag = t0_poly - t0_area differ from zero?,One-sample Wilcoxon signed-rank test on paired differences,V,1035,NA,5.357669668767455e-9,0.0022413439130704866,FALSE
